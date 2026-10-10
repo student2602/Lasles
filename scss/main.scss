@@ -1,8 +1,6 @@
-@import "normalize";
-@import "container";
-@import "variables";
-@import "mixins";
-@import "fonts";
 @import "generals";
+@import "fonts";
+@import 'mixins';
+@import 'blocks/blocks';
 
-@import "blocks/blocks";
+

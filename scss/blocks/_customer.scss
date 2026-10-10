@@ -1,0 +1,221 @@
+$primary-color: #f53838;
+$text-dark: #0b132a;
+$text-gray: #4f5665;
+$border-color: #dde0e4;
+
+.customers {
+  padding: 80px 0;
+  background-color: #ffffff;
+
+  &-header {
+    text-align: center;
+    max-width: 555px;
+    margin: 0 auto 60px;
+  }
+
+  &-title {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 50px;
+    color: $text-dark;
+    margin-bottom: 20px;
+  }
+
+  &-desc {
+    color: $text-gray;
+    line-height: 30px;
+    font-size: 16px;
+  }
+
+  /* 3 kartın tek satırda yan yana durmasını sağlar */
+  &-list {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+    width: 100%;
+  }
+
+  &-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-dots {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .dot {
+      width: 15px;
+      height: 15px;
+      background-color: $border-color;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &-arrows {
+    display: flex;
+    gap: 20px;
+
+    .arrow {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid $primary-color;
+      background-color: #ffffff;
+      color: $primary-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &-next {
+        background-color: $primary-color;
+        color: #ffffff;
+        box-shadow: 0 12px 20px rgba($primary-color, 0.35);
+      }
+
+      &:hover {
+        background-color: $primary-color;
+        color: #ffffff;
+        box-shadow: 0 12px 20px rgba($primary-color, 0.35);
+      }
+    }
+  }
+}
+
+.customer {
+  flex: 1;
+  border: 2px solid $border-color;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &-user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: $text-dark;
+    margin-bottom: 5px;
+  }
+
+  &-location {
+    font-size: 14px;
+    color: $text-gray;
+  }
+
+  &-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &-score {
+    font-weight: 400;
+    color: $text-dark;
+    font-size: 16px;
+  }
+
+  &-star {
+    color: #fea250;
+    font-size: 16px;
+  }
+
+  &-text {
+    line-height: 30px;
+    color: $text-dark;
+    font-size: 16px;
+  }
+}
+
+#card-1:checked {
+  ~ .customers-list .customer-1 {
+    border-color: $primary-color;
+    box-shadow: 0 20px 30px rgba(11, 19, 42, 0.07);
+  }
+  ~ .customers-controls .dot-1 {
+    width: 45px;
+    background-color: $primary-color;
+    border-radius: 10px;
+  }
+}
+
+#card-2:checked {
+  ~ .customers-list .customer-2 {
+    border-color: $primary-color;
+    box-shadow: 0 20px 30px rgba(11, 19, 42, 0.07);
+  }
+  ~ .customers-controls .dot-2 {
+    width: 45px;
+    background-color: $primary-color;
+    border-radius: 10px;
+  }
+}
+
+#card-3:checked {
+  ~ .customers-list .customer-3 {
+    border-color: $primary-color;
+    box-shadow: 0 20px 30px rgba(11, 19, 42, 0.07);
+  }
+  ~ .customers-controls .dot-3 {
+    width: 45px;
+    background-color: $primary-color;
+    border-radius: 10px;
+  }
+}
+.customers-arrows {
+  display: flex;
+  gap: 20px;
+
+  .arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #f53838;
+    background-color: #ffffff;
+    color: #f53838;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &-next {
+      background-color: #f53838;
+      color: #ffffff;
+      box-shadow: 0 12px 20px rgba(245, 56, 56, 0.35);
+    }
+
+    &:hover {
+      background-color: #f53838;
+      color: #ffffff;
+      box-shadow: 0 12px 20px rgba(245, 56, 56, 0.35);
+    }
+  }
+}

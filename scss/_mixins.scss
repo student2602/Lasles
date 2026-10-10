@@ -1,5 +1,79 @@
-@mixin reset-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+
+@mixin flex-center($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin span-avatar($size: 50px, $img-url: '') {
+  display: inline-block; 
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-image: url($img-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin red-button {
+  display: inline-block;
+  background-color: #f53838;
+  color: #ffffff;
+  padding: 17px 65px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 15px 30px rgba(245, 56, 56, 0.35);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 20px 35px rgba(245, 56, 56, 0.5);
   }
+}
+@mixin circle-icon($size: 35px) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #f53838;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #f53838;
+    color: #ffffff;
+  }
+}
+@mixin social-icon-box($size: 34px) {
+  width: $size;
+  height: $size;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 13px 18px rgba(17, 19, 35, 0.08);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.social-icon {
+  @include social-icon-box(34px);
+  
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}
